@@ -13,22 +13,17 @@
     ":enableVulnerabilityAlerts",
     ":timezone(UTC)",
     ":label(renovate)",
-    "group:allNonMajor"
+    "group:allNonMajor",
+    "group:test",
+    "group:phpstan",
+    "group:symfony"
   ],
   "commitBodyTable": true,
-  "lockFileMaintenance": {
-    "enabled": true,
-    "extends": [
-      "schedule:daily"
-    ]
-  },
+  "lockFileMaintenance": { "enabled": false },
   "platformAutomerge": true,
-  "rangeStrategy": "replace",
   "rollbackPrs": true,
+  "composerIgnorePlatformReqs": null,
   "packageRules": [
-    {
-      "rangeStrategy": "bump"
-    },
     {
       "matchPackageNames": [
         "php"
@@ -37,6 +32,7 @@
         ":automergeDisabled",
         ":automergePr"
       ],
+      "rangeStrategy": "widen",
       "ignoreUnstable": false,
       "groupName": "PHP"
     }
