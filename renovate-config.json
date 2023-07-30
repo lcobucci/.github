@@ -22,7 +22,6 @@
   "lockFileMaintenance": { "enabled": false },
   "platformAutomerge": true,
   "rollbackPrs": true,
-  "composerIgnorePlatformReqs": null,
   "packageRules": [
     {
       "matchPackageNames": [
